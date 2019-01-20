@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 // 3rd party
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule ,AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 
 //
 
@@ -62,4 +62,6 @@ import { firebaseConfig } from './firebase/config';
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ 
+}

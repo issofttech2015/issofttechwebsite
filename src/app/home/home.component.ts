@@ -13,9 +13,12 @@ export class HomeComponent implements OnInit {
 
   _geoInformations: any[];
 
+
   constructor(private homeService: HomeService,
     private afs: AngularFirestore,
     private datePipe: DatePipe) {
+    // this.afs.firestore.settings({timestampsInSnapshots: true});
+
   }
 
   ngOnInit() {
@@ -25,7 +28,6 @@ export class HomeComponent implements OnInit {
       res['date'] = date;
       res['dateNowISO'] = this.datePipe.transform(date, 'EEEE, MMMM d, y, h:mm:ss a zzzz');
       res['dateNowMilliseconds'] = formatDate(date, 'dd/MM/yyyy, h:mm a', 'en');
-      console.log(res);
       this.afs.collection('geoInformations').add(res);
     });
 
