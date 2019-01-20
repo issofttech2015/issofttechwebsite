@@ -1,0 +1,59 @@
+<!-- Header Section Start -->
+<header id="slider-area">
+  <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/Home"><span class="lni-bulb"></span>ESSENCE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="lni-menu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Home" (click)="getActiveTab('Home')" [class.active]="activetab === 'Home'">Home</a>
+          </li>
+          <li class="nav-item">
+
+            <a class="nav-link page-scroll" routerLink="/Services" (click)="getActiveTab('Services')" [class.active]="activetab === 'Services'">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Features" (click)="getActiveTab('Features')" [class.active]="activetab === 'Features'">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Works" (click)="getActiveTab('Works')" [class.active]="activetab === 'Works'">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Pricing" (click)="getActiveTab('Pricing')" [class.active]="activetab === 'Pricing'">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Team" (click)="getActiveTab('Team')" [class.active]="activetab === 'Team'">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Subscribe" (click)="getActiveTab('Subscribe')" [class.active]="activetab === 'Subscribe'">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Blog" (click)="getActiveTab('Blog')" [class.active]="activetab === 'Blog'">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" routerLink="/Contact" (click)="getActiveTab('Contact')" [class.active]="activetab === 'Contact'">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <app-home></app-home> -->
+
+</header>
+<!-- Header Section End -->
+
+
+
+
+<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5200883379917863",
+    enable_page_level_ads: true
+  });
+</script> -->
