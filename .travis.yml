@@ -1,9 +1,4 @@
-language: node_js
-node_js:
- — “8.11.3”
-script:
- — echo “Deploy!!”
-install:
- — npm install -g firebase-tools
-after_success:
- — firebase deploy — project issofttech — token $FIREBASE_TOKEN.
+deploy:
+  provider: firebase
+  token:"1/AD7sdasdasdKJA824OvEFc1c89Xz2ilBlaBlaBla"
+  project: "issofttech"
