@@ -1,4 +1,23 @@
-deploy:
-  provider: firebase
-  token:"1/AD7sdasdasdKJA824OvEFc1c89Xz2ilBlaBlaBla"
-  project: "issofttech"
+language: node_js
+node_js:
+  - "8.12.0"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install -g firebase-tools
+  - npm install -g @angular/cli
+
+script:
+  - ng build --prod
+
+after_success:
+  - firebase use issofttech
+  - firebase deploy --token $FIREBASE_TOKEN
+
+notifications:
+  email:
+    on_failure: "issofftech2016@gmail.com"
+    on_success: "issofftech2016@gmail.com"
