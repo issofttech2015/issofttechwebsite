@@ -12,36 +12,38 @@
       <div class="row">
         <div class="col-lg-9 col-md-9 col-xs-12">
           <div class="contact-block">
-            <form id="contactForm">
+            <form id="contactForm" [formGroup]="registerForm" (ngSubmit)="sendMessage()">
               <div class="row">
-                <div class="col-md-6">
+                <!--  <div class="col-md-12">
                   <div class="form-group">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required
                       data-error="Please enter your name">
                     <div class="help-block with-errors"></div>
                   </div>
-                </div>
-                <div class="col-md-6">
+                </div> -->
+                <!-- <div class="col-md-6">
                   <div class="form-group">
                     <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required
                       data-error="Please enter your email">
                     <div class="help-block with-errors"></div>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                    <input type="text" placeholder="Subject" formControlName="msg_subject" [(ngModel)]="contactObj.msg_subject"
+                      id="msg_subject" class="form-control" required data-error="Please enter your subject">
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message" rows="7" data-error="Write your message"
-                      required></textarea>
+                    <textarea class="form-control" id="message" formControlName="message" [(ngModel)]="contactObj.message"
+                      placeholder="Your Message" rows="7" data-error="Write your message" required></textarea>
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="submit-button">
-                    <button class="btn btn-common btn-effect" id="submit" type="submit">Send Message</button>
+                    <button class="btn btn-common btn-effect" id="submit" type="submit" [disabled]="registerForm.invalid">Send
+                      Message</button>
                     <div id="msgSubmit" class="h3 hidden"></div>
                     <div class="clearfix"></div>
                   </div>
@@ -58,7 +60,7 @@
                 <i class="lni-map"></i>
                 <h5>Location</h5>
                 <p>AF-161, Rabindra Pally, Krishnapur,Salt Lake 7 no Tank ,
-                    Salt Lake Sector-I.</p>
+                  Salt Lake Sector-I.</p>
               </div>
               <!-- Content Info -->
               <div class="contact-info">
