@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 // 3rd party
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
-
+import { AngularFireAuthModule } from 'angularfire2/auth';
 //
 
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -57,11 +58,13 @@ import { firebaseConfig } from './firebase/config';
     AppRoutingModule,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule {
- 
 }
