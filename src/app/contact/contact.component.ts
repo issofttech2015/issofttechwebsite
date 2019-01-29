@@ -50,7 +50,7 @@ export class ContactComponent implements OnInit {
   saveMessage() {
     this.angularFirestore.collection('contactUs').add(this.contactObj).then((res) => {
       this.logout();
-      alert(res.path);
+      alert('Send Message And Token Id - ' + res.id);
     });
   }
 
