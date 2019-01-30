@@ -1,10 +1,12 @@
 /* ==========================================================================
    1. IMPORT GOOGLE FONTS
    ========================================================================== */
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700|Open+Sans");
 /* ==========================================================================
    2. GENERAL
    ========================================================================== */
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #546E7A;
@@ -54,8 +56,7 @@ ul li {
   list-style: none;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   text-decoration: none;
   outline: none;
 }
@@ -79,6 +80,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 /* ==========================================================================
    2.1 Section Title
    ========================================================================== */
+
 .section {
   padding: 80px 0;
 }
@@ -128,6 +130,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 /* ==========================================================================
    2.2 Buttons
    ========================================================================== */
+
 .btn {
   font-size: 14px;
   padding: 10px 30px;
@@ -142,8 +145,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   display: inline-block;
 }
 
-.btn:focus,
-.btn:active {
+.btn:focus, .btn:active {
   box-shadow: none;
   outline: none;
   color: #fff;
@@ -183,6 +185,14 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   width: 100%;
 }
 
+.btn-disable {
+  background-color: rgb(185, 184, 184);
+  position: relative;
+  z-index: 1;
+  padding: 12px 32px;
+  border-radius: 30px;
+}
+
 .btn-border {
   border-style: solid;
   border-width: 2px;
@@ -219,6 +229,7 @@ button:focus {
 /* ==========================================================================
    2.3 Social Iocns
    ========================================================================== */
+
 .social-icons {
   margin-bottom: 20px;
 }
@@ -318,6 +329,7 @@ button:focus {
 /* ==========================================================================
    2.4  Pre Loader
    ========================================================================== */
+
 #loader {
   position: fixed;
   top: 0;
@@ -377,6 +389,7 @@ button:focus {
 /* ========================================================================== 
   -2.5 Scroll To Up 
    ========================================================================== */
+
 .back-to-top {
   display: none;
   position: fixed;
@@ -418,6 +431,7 @@ button:focus {
 /* ==========================================================================
    Navbar Style
    ========================================================================== */
+
 .bg-faded {
   background-color: #fff;
 }
@@ -540,8 +554,7 @@ button:focus {
   transition: 0.3s;
 }
 
-.navbar-expand-md .navbar-nav .active::before,
-.navbar-expand-md .navbar-nav .nav-link:hover::before {
+.navbar-expand-md .navbar-nav .active::before, .navbar-expand-md .navbar-nav .nav-link:hover::before {
   width: 50%;
 }
 
@@ -549,17 +562,11 @@ button:focus {
   max-width: 115px;
 }
 
-.navbar-expand-md .navbar-nav .nav-link:focus,
-.navbar-expand-md .navbar-nav .nav-link:hover,
-.navbar-expand-md .navbar-nav .nav-link:hover:before {
+.navbar-expand-md .navbar-nav .nav-link:focus, .navbar-expand-md .navbar-nav .nav-link:hover, .navbar-expand-md .navbar-nav .nav-link:hover:before {
   color: #F97794;
 }
 
-.navbar-expand-md .navbar-nav .active > .nav-link,
-.navbar-expand-md .navbar-nav .nav-link.active,
-.navbar-expand-md .navbar-nav .nav-link.active:before,
-.navbar-expand-md .navbar-nav .nav-link.open,
-.navbar-expand-md .navbar-nav .open > .nav-link {
+.navbar-expand-md .navbar-nav .active>.nav-link, .navbar-expand-md .navbar-nav .nav-link.active, .navbar-expand-md .navbar-nav .nav-link.active:before, .navbar-expand-md .navbar-nav .nav-link.open, .navbar-expand-md .navbar-nav .open>.nav-link {
   color: #F97794;
 }
 
@@ -603,6 +610,7 @@ button:focus {
 /* ==========================================================================
    Hero Area
    ========================================================================== */
+
 .hero-area {
   background: url(../img/hero-area.jpg) no-repeat;
   background-size: cover;
@@ -681,6 +689,7 @@ button:focus {
 /* ==========================================================================
  Hero Production version
  ========================================================================== */
+
 .hero-area-2 {
   background: url(../img/bg/hero-area-2.jpg) fixed no-repeat;
   background-size: cover;
@@ -811,6 +820,7 @@ button:focus {
 /* ==========================================================================
    Video Background
    ========================================================================== */
+
 #video-area {
   overflow: hidden;
   position: relative;
@@ -861,6 +871,7 @@ button:focus {
 /* ==========================================================================
   About Section Style
    ========================================================================== */
+
 #about {
   position: relative;
   background: #f9f9f9;
@@ -911,6 +922,7 @@ button:focus {
 /* ==========================================================================
   About Area
   ========================================================================== */
+
 #about-area .about-thumb {
   position: relative;
   z-index: 1;
@@ -936,6 +948,7 @@ button:focus {
 /* ==========================================================================
    Clients 
    ========================================================================== */
+
 #clients {
   background: #f9f9f9;
 }
@@ -962,6 +975,7 @@ button:focus {
 /* ==========================================================================
     call to action
    ========================================================================== */
+
 #cta {
   background: url(../img/bg/bg-cta.jpg) fixed;
   background-size: cover;
@@ -996,6 +1010,7 @@ button:focus {
 /* ==========================================================================
  Video promo Style
  ========================================================================== */
+
 .video-promo {
   background: url(../img/bg/video.jpg);
   position: relative;
@@ -1031,6 +1046,7 @@ button:focus {
 /* ==========================================================================
    Portfolio Section
    ========================================================================== */
+
 #portfolios {
   background: #f9f9f9;
 }
@@ -1135,6 +1151,7 @@ button:focus {
 }
 
 /* Services Item */
+
 .item-boxes {
   padding: 30px;
   border-radius: 4px;
@@ -1331,6 +1348,7 @@ button:focus {
 /* ==========================================================================
    Featured Section Start
    ========================================================================== */
+
 .featured-box {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1384,6 +1402,7 @@ button:focus {
 /* ==========================================================================
  Team Section
    ========================================================================== */
+
 .single-team:hover .team-details {
   opacity: 1;
 }
@@ -1571,6 +1590,7 @@ button:focus {
 /* ==========================================================================
   Pricing Table
   ========================================================================== */
+
 .pricing-table {
   padding: 20px 0px 0px;
   margin: 0 auto;
@@ -1639,6 +1659,7 @@ button:focus {
 /* ==========================================================================
   Slider
    ========================================================================== */
+
 #carousel-area {
   overflow: hidden;
   background: #2c3e50;
@@ -1722,8 +1743,7 @@ button:focus {
   opacity: 0.9;
 }
 
-#carousel-area .carousel-indicators li:hover,
-#carousel-area .carousel-indicators li.active {
+#carousel-area .carousel-indicators li:hover, #carousel-area .carousel-indicators li.active {
   opacity: 1;
 }
 
@@ -1766,6 +1786,7 @@ button:focus {
 /* ==========================================================================
    Blog 
    ========================================================================== */
+
 #blog .blog-item-wrapper {
   background: #fff;
   border-radius: 4px;
@@ -1847,6 +1868,7 @@ button:focus {
 /* ==========================================================================
     Single Page Style
    ========================================================================== */
+
 #blog-single {
   padding: 80px 0;
   background: #ECF0F1;
@@ -1945,6 +1967,7 @@ button:focus {
 /* ==========================================================================
    Contact Us
   ========================================================================== */
+
 .form-control {
   width: 100%;
   margin-bottom: 20px;
@@ -2012,6 +2035,7 @@ textarea {
 }
 
 /* Contact Map */
+
 #conatiner-map {
   width: 100%;
   height: 480px;
@@ -2082,6 +2106,7 @@ textarea {
 /* ==========================================================================
   19. Subscribe Style
   ========================================================================== */
+
 #subscribe {
   background: url(../img/bg/bg-subs.jpg);
   position: relative;
@@ -2173,6 +2198,7 @@ textarea {
 /* ==========================================================================
    Footer Style
    ========================================================================== */
+
 .block-title {
   font-size: 14px;
   font-weight: 500;
@@ -2326,6 +2352,7 @@ footer .menu li a:hover {
 /* ==========================================================================
  Counter Section Style
  ========================================================================== */
+
 .counters {
   /* background: url(assets/img/bg/bg-counter.jpg) fixed; */
   position: relative;
