@@ -42,7 +42,8 @@
                     <div class="help-block with-errors"></div>
                   </div>
                   <div class="submit-button">
-                    <button class="btn btn-common btn-effect" id="submit" type="submit" [disabled]="registerForm.invalid">Send
+                    <button class="btn btn-disable btn-effect" id="submit" type="submit" [disabled]="registerForm.invalid"
+                      [ngClass]="{'btn-disable': registerForm.invalid , 'btn-common' :registerForm.valid }">Send
                       Message</button>
                     <div id="msgSubmit" class="h3 hidden"></div>
                     <div class="clearfix"></div>
