@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'Team', component: TeamComponent },
   { path: 'Subscribe', component: SubscribeComponent },
   { path: 'Blog', component: BlogComponent },
-  { path: 'Contact', component: ContactComponent },
+  { path: 'ContactUs', component: ContactComponent },
   { path: '**', redirectTo: '/Home' }
   //   { path: 'heroes', component: HeroesComponent },
   //   { path: 'heroes', component: HeroesComponent },
