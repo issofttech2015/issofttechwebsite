@@ -30,9 +30,7 @@ const routes: Routes = [
   { path: 'Subscribe', component: SubscribeComponent },
   // { path: 'Blog', component: BlogComponent },
   { path: 'ContactUs', component: ContactComponent },
-  { path: '**', redirectTo: '/Home' }
-  //   { path: 'heroes', component: HeroesComponent },
-  //   { path: 'heroes', component: HeroesComponent },
+  { path: '**', redirectTo: '/Home' }  
 ];
 
 
