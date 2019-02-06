@@ -19,5 +19,5 @@ after_success:
 
 notifications:
   email:
-    on_failure: "issofftech2016@gmail.com"
-    on_success: "issofftech2016@gmail.com"
+    on_failure: "issofttech2016@gmail.com"
+    on_success: "issofttech2016@gmail.com"
