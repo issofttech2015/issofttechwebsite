@@ -14,7 +14,7 @@ export class SubscribeComponent implements OnInit {
   subscribeForm: FormGroup;
   subscribeObj = {
     subscribe_name: '',
-    subscribe_phonenumber: null
+    subscribe_phonenumber: ''
   };
 
   constructor(private angularFireAuth: AngularFireAuth,
@@ -25,7 +25,7 @@ export class SubscribeComponent implements OnInit {
   ngOnInit() {
     this.subscribeForm = this.formBuilder.group({
       subscribe_name: ['', Validators.required],
-      subscribe_phonenumber: [null, Validators.required, Validators.minLength(10), Validators.maxLength(10)]
+      subscribe_phonenumber: ['', Validators.required, Validators.minLength(10), Validators.maxLength(10)]
     });
   }
 
