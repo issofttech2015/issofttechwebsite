@@ -47,10 +47,11 @@ export class ContactComponent implements OnInit {
       alert(err.message);
     });
   }
+
   saveMessage() {
     this.angularFirestore.collection('contactUs').add(this.contactObj).then((res) => {
       this.logout();
-      alert('Send Message And Token Id - ' + res.id);
+      alert('Token Id - ' + res.id);
     });
   }
 
