@@ -8,13 +8,14 @@ import { DatePipe, formatDate } from '@angular/common';
 @Component({
   selector: 'app-subscribe',
   templateUrl: './subscribe.component.html',
-  styleUrls: ['./subscribe.component.css']
+  styleUrls: ['./subscribe.component.css'],
+  providers: [DatePipe]
 })
 export class SubscribeComponent implements OnInit {
   subscribeForm: FormGroup;
   subscribeObj = {
-    subscribe_name: '',
-    subscribe_phonenumber: ''
+    subscribe_name: 'I',
+    subscribe_phonenumber: '987654321'
   };
 
   constructor(private angularFireAuth: AngularFireAuth,
@@ -25,11 +26,11 @@ export class SubscribeComponent implements OnInit {
   ngOnInit() {
     this.subscribeForm = this.formBuilder.group({
       subscribe_name: ['', Validators.required],
-      subscribe_phonenumber: ['', Validators.required, Validators.minLength(10), Validators.maxLength(10)]
+      subscribe_phonenumber: ['', [Validators.required, Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[0-9 ]*")]]
     });
   }
 
-  subscribe(){
+  subscribe() {
     const loginMethod = new firebase.auth.GoogleAuthProvider();
     let date;
     this.angularFireAuth.auth.signInWithPopup(loginMethod).then((res) => {
