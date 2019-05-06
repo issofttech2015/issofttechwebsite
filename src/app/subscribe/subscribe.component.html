@@ -13,12 +13,18 @@
               <div class="row">
                 <div class="col-12 form-line">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="name" placeholder="Name">
+                    <input type="text" class="form-control" name="name" placeholder="Name" id="subscribe_name"
+                      formControlName="subscribe_name" [(ngModel)]="subscribeObj.subscribe_name" required
+                      data-error="Please enter your Name">
+                      <div class="help-block with-errors"></div>
                   </div>
                 </div>
                 <div class="col-md-12 form-line">
                   <div class="form-group">
-                    <input type="number" class="form-control" name="phonenumber" placeholder="Phone Number">
+                    <input type="number" class="form-control" name="phonenumber" placeholder="Phone Number" id="subscribe_phonenumber"
+                    formControlName="subscribe_phonenumber" [(ngModel)]="subscribeObj.subscribe_phonenumber" required
+                    data-error="Please enter your Phone Number">
+                    <div class="help-block with-errors"></div>
                   </div>
                 </div>
                 <!-- <div class="col-12 form-line">
@@ -28,7 +34,8 @@
                 </div> -->
                 <div class="col-12">
                   <div class="form-submit">
-                    <button type="submit" class="btn btn-disable btn-effect">Subscribe Now</button>
+                    <button type="submit" class="btn btn-disable btn-effect" id="submit" type="submit" [disabled]="subscribeForm.invalid"
+                    [ngClass]="{'btn-disable': subscribeForm.invalid , 'btn-common' :subscribeForm.valid }">Subscribe Now</button>
                   </div>
                 </div>
               </div>
