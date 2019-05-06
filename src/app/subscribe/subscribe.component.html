@@ -9,23 +9,23 @@
               <h3>Subscribe to Newsletter</h3>
               <p>Weekly Freebies and More!</p>
             </div>
-            <form>
+            <form id="subscribeForm" [formGroup]="subscribeForm" (ngSubmit)="subscribe()">
               <div class="row">
                 <div class="col-12 form-line">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="email" placeholder="Name">
+                    <input type="text" class="form-control" name="name" placeholder="Name">
                   </div>
                 </div>
                 <div class="col-md-12 form-line">
                   <div class="form-group">
-                    <input type="text" class="form-control" name="phone" placeholder="Phone">
+                    <input type="number" class="form-control" name="phonenumber" placeholder="Phone Number">
                   </div>
                 </div>
-                <div class="col-12 form-line">
+                <!-- <div class="col-12 form-line">
                   <div class="form-group">
                     <input type="email" class="form-control" name="email" placeholder="Email">
                   </div>
-                </div>
+                </div> -->
                 <div class="col-12">
                   <div class="form-submit">
                     <button type="submit" class="btn btn-disable btn-effect">Subscribe Now</button>
