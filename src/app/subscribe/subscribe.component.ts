@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { DatePipe } from '@angular/common';
+import { DatePipe, formatDate } from '@angular/common';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-subscribe',
@@ -27,5 +28,42 @@ export class SubscribeComponent implements OnInit {
       subscribe_phonenumber: [null, Validators.required, Validators.minLength(10), Validators.maxLength(10)]
     });
   }
+
+  subscribe(){
+    const loginMethod = new firebase.auth.GoogleAuthProvider();
+    let date;
+    this.angularFireAuth.auth.signInWithPopup(loginMethod).then((res) => {
+      console.log(res);
+      this.subscribeObj['displayName'] = res.user.displayName;
+      this.subscribeObj['email'] = res.user.email;
+      this.subscribeObj['phoneNumber'] = res.user.phoneNumber;
+      this.subscribeObj['photoURL'] = res.user.photoURL;
+      date = Date.now();
+      this.subscribeObj['date'] = date;
+      this.subscribeObj['dateNowISO'] = this.datePipe.transform(date, 'EEEE, MMMM d, y, h:mm:ss a zzzz');
+      this.subscribeObj['dateNowMilliseconds'] = formatDate(date, 'dd/MM/yyyy, h:mm a', 'en');
+      this.saveSubscribers();
+    }).catch((err) => {
+      console.log(err);
+      alert(err.message);
+    });
+  }
+
+  saveSubscribers() {
+    this.angularFirestore.collection('subscribers').add(this.subscribeObj).then((res) => {
+      this.logout();
+      alert('Token Id - ' + res.id);
+    });
+  }
+
+  logout() {
+    this.angularFireAuth.auth.signOut().then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
+  get f() { return this.subscribeForm.controls; }
 
 }
