@@ -31,17 +31,17 @@ export class HomeComponent implements OnInit {
       this.afs.collection('geoInformations').add(res);
     });
 
-    this.getGeoList().subscribe(actionArray => {
-      this._geoInformations = actionArray.map(item => {
-        return {
-          id: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as any;
-      });
-      // console.log(this._geoInformations);
-    });
-
-
+    // ==================== Get All Visit our site  =====================
+    // this.getGeoList().subscribe(actionArray => {
+    //   this._geoInformations = actionArray.map(item => {
+    //     return {
+    //       id: item.payload.doc.id,
+    //       ...item.payload.doc.data()
+    //     } as any;
+    //   });
+    //   console.log(this._geoInformations);
+    // });
+    // ==================================================================
 
   }
 
