@@ -14,8 +14,8 @@ import { DatePipe, formatDate } from '@angular/common';
 export class SubscribeComponent implements OnInit {
   subscribeForm: FormGroup;
   subscribeObj = {
-    subscribe_name: 'I',
-    subscribe_phonenumber: '987654321'
+    subscribe_name: '',
+    subscribe_phonenumber: ''
   };
 
   constructor(private angularFireAuth: AngularFireAuth,
