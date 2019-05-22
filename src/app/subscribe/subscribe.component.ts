@@ -26,7 +26,7 @@ export class SubscribeComponent implements OnInit {
   ngOnInit() {
     this.subscribeForm = this.formBuilder.group({
       subscribe_name: ['', Validators.required],
-      subscribe_phonenumber: ['', [Validators.required, Validators.minLength(10),Validators.maxLength(10),Validators.pattern("[0-9 ]*")]]
+      subscribe_phonenumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern('[0-9 ]*')]]
     });
   }
 
